@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nextaste – Restaurant</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <a class="logo" href="#top">Next<span>aste</span></a>
+  <nav>
+    <a class="nl" href="#menu">Menu</a><a class="nl" href="#about">About</a><a class="nl" href="#reserve">Reserve</a>
+    <button id="theme" aria-label="Toggle dark mode">☾</button>
+  </nav>
+</header>
+
+<main id="top">
+<div class="hero">
+  <div>
+    <h1>Tomorrow’s flavours, cooked fresh today.</h1>
+    <p>Nextaste is a modern kitchen mixing coastal Kerala spices with seasonal, locally grown produce. Open daily for lunch and dinner.</p>
+    <div class="cta"><a class="btn" href="#reserve">Book a table</a><a class="btn ghost" href="#menu">See the menu</a></div>
+  </div>
+  <div class="plate" aria-hidden="true">🍛</div>
+</div>
+
+<section id="menu">
+  <h2>Our menu</h2>
+  <p class="sub">Tap “Add” to build your order list.</p>
+  <div class="tabs" id="tabs"></div>
+  <div class="menu" id="menuGrid"></div>
+</section>
+
+<section id="about">
+  <div class="about">
+    <div>
+      <h2>Food with a short supply chain</h2>
+      <p class="sub">We buy fish from the morning catch, vegetables from farms within 40 km, and grind our masalas in-house every week. The menu changes with the season, so there is always something new to try.</p>
+      <a class="btn ghost" href="#reserve">Reserve a seat</a>
+    </div>
+    <div class="stats">
+      <div><b>40 km</b>Farthest farm we buy from</div>
+      <div><b>Daily</b>Fresh masala grinding</div>
+      <div><b>12–11 pm</b>Open every day</div>
+      <div><b>60 seats</b>Indoor and garden</div>
+    </div>
+  </div>
+</section>
+
+<section id="reserve">
+  <h2>Reserve a table</h2>
+  <p class="sub">We’ll confirm your booking by phone within an hour.</p>
+  <form class="res" id="resForm" novalidate>
+    <label>Name<input id="name" required autocomplete="name"></label>
+    <label>Phone<input id="phone" type="tel" required autocomplete="tel"></label>
+    <label>Date<input id="date" type="date" required></label>
+    <label>Time<select id="time"><option>12:30 pm</option><option>1:30 pm</option><option>7:00 pm</option><option>8:00 pm</option><option>9:00 pm</option></select></label>
+    <label class="full">Guests<select id="guests"></select></label>
+    <button class="btn full" type="submit">Request booking</button>
+    <p id="msg" role="status"></p>
+  </form>
+</section>
+</main>
+
+<footer>Nextaste · Mannarkkad, Kerala · Open daily 12 pm – 11 pm</footer>
+<div id="cart" role="status"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
